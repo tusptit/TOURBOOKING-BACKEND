@@ -12,7 +12,6 @@ import java.util.Date;
 public class Tour implements Serializable {
 
     @Id
-    @Column(name = "idTour")
     @Max(value = 20)
     private int idTour;
     @NotNull
@@ -30,7 +29,6 @@ public class Tour implements Serializable {
     @NotNull
     private String duration;//thời gian tour
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "startDay")
     @NotNull
     private Date startDay;//ngày khởi hành
     @NotNull
@@ -39,7 +37,6 @@ public class Tour implements Serializable {
     private int idCollaborators;
     private int idSeo;
     private String status;
-    @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt = new Date();
 

@@ -9,8 +9,7 @@ import java.io.Serializable;
 public class Bookmark implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idBookmark")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idBookmark;
     @NotNull
     private int idCustomer;

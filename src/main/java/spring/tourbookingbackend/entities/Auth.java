@@ -10,8 +10,7 @@ import java.util.Date;
 public class Auth implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idAuth")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAuth;
     @NotNull
     @Max(value = 10)
@@ -24,10 +23,8 @@ public class Auth implements Serializable {
     private int customer;//id của khách hàng
     private int officer;//id của nhân viên
     private int collaborators;//id của cộng tác viên
-    @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt = new Date();
-    @Column(name = "updatedAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt = new Date();
 

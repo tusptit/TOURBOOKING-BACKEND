@@ -10,8 +10,7 @@ import java.util.Date;
 public class Order implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idOrder")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idOrder;
     @NotNull
     private String idTour;
@@ -21,8 +20,7 @@ public class Order implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date startDate;
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "createdAt")
-    private Date createdAt;
+    private Date createdAt = new Date();
     @NotNull
     private float price;
     private String status;

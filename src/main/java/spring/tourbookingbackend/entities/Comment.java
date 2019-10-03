@@ -10,14 +10,12 @@ import java.util.Date;
 public class Comment implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idComment")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idComment;
     @NotNull
     private int idCustomer;
     @NotNull
     private String idTour;
-    @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt = new Date();
 

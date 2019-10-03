@@ -8,8 +8,7 @@ import java.io.Serializable;
 public class Role implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idRole")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRole;
     private String codeRole;
     private String desc;

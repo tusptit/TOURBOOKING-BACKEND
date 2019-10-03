@@ -10,8 +10,7 @@ import java.util.Date;
 public class Collaborators implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCollaborators")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCollaborators;
     @NotNull
     @Max(value = 10)
@@ -24,13 +23,10 @@ public class Collaborators implements Serializable {
     private boolean gender;
     @Temporal(TemporalType.TIMESTAMP)
     private Date birthday;
-    @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt = new Date();
-    @Column(name = "updatedAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt = new Date();
-    @Column(name = "codeRole")
     private String[] codeRole;
 
 

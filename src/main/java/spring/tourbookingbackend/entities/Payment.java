@@ -9,8 +9,7 @@ import java.io.Serializable;
 public class Payment implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idPayment")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPayment;
     @NotNull
     private int idCustomer;

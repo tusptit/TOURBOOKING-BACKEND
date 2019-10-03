@@ -2,15 +2,15 @@ package spring.tourbookingbackend.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "seo")
-public class Seo {
+public class Seo implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idSeo")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idSeo;
     private String name;
     private int level;

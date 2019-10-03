@@ -10,8 +10,7 @@ import java.util.Date;
 public class Customer implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCustomer")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCustomer;
     @NotNull
     @Max(value = 10)
@@ -24,13 +23,10 @@ public class Customer implements Serializable {
     private boolean gender;
     @Temporal(TemporalType.TIMESTAMP)
     private Date birthday;
-    @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt = new Date();
-    @Column(name = "updatedAt")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt = new Date();
-    @Column(name = "codeRole")
     private String[] codeRole;
 
     public Customer() {
